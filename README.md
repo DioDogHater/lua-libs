@@ -10,6 +10,17 @@ please also remove the line `target_link_libraries(lua-test SDL2)` in `CMakeList
 Other libraries will not need any additional linking, just remember to link the lua
 library version installed on your computer.
 
+# Dependencies
+For every compilation in this project you will need a version of the Lua library
+installed on your computer. Thankfully, you will only need to setup the linking part
+since the project already has the Lua include files. For my setup, I used the system wide
+install of lua5.4 on linux. For other versions or setups, please tweak the compilation settings
+and stuff.
+For the SDL2 wrapper library `/src/libs/sdl.h`, you will need to install and
+setup SDL2. I used the SDL2 system wide install on linux, but if you do not have
+the same setup, please tweak `CMakeLists.txt` and/or the compilation commands to
+accomodate your setup.
+
 # How to compile into a standalone app
 To compile the standalone app, just compile using `cmake`.
 ```
